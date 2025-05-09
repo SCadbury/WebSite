@@ -34,8 +34,4 @@
   <li>Es el mejor punto de partida para nuevos usuarios y colaboradores.</li>
 </ul>
 
-<p align="center">
-  <strong>➡️ Visítalo ahora:</strong> <a href="https://scadbury.github.io/Cadbury_Style/" target="_blank">https://scadbury.github.io/Cadbury_Style/</a>
-</p>
-
 <hr />

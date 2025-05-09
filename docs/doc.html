@@ -3,104 +3,1035 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CadburyStyle</title>
+    <title>CadburyStyle - Docs </title>
     <script>
-      // Aplicando primero el tema guardado antes de que cargue el CSS
-      const temaGuardado = localStorage.getItem('tema') || 'theme-dark'; // Oscuro por defecto
+      const temaGuardado = localStorage.getItem('tema') || 'theme-dark'; 
       document.documentElement.classList.add(temaGuardado);
     </script>
-    <link rel="stylesheet" href="CadburyStyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Scadbury/Cadbury_Style@main/docs/CadburyStyle.css">
+    <script src="https://cdn.jsdelivr.net/gh/Scadbury/Cadbury_Style@main/docs/script.js"></script>
 </head>
-<body>
-    <nav class="navbar navbar-deep">
-        <div class="navbar-logo">CadburyStyle</div>
-        <div class="navbar-links">
-            <a href="#inicio">Inicio</a>
-            <a href="/docs/doc.html">Documentación</a>
-            <a href="/docs/examples.html">Ejemplos</a>
-            <button class="theme-toggle-btn" aria-label="Cambiar tema">🌙</button>
-        </div>
-    </nav>
-
-    <div class="docs-layout">
+<body class="pd-0 m-0">
+  <nav class="navbar  bg-color-1" style = "position: sticky;">
+    <div class="navbar-logo">CadburyStyle</div>
+  
+    <input type="checkbox" id="nav-toggle" class="navbar-checkbox">
+    <label for="nav-toggle" class="navbar-toggle">|||</label>
+  
+    <div class="navbar-links">
+      <a href="index.html">Inicio</a>
+      <a href="doc.html">Docs</a>
+      <a href="install.html">Instalación</a>
+      <button class="theme-toggle-btn">🌙</button>
+    </div>
+  </nav>  
+      <div class="page-layout">
+        <!-- Sidebar -->
         <aside class="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Introducción</a></li>
-                    <li><a href="#botones">Botones</a></li>
-                    <li><a href="#contenidos">Contenidos</a></li>
-                    <li><a href="#javascript">JavaScript</a></li>
-                    <li><a href="#accesibilidad">Accesibilidad</a></li>
-                </ul>
-            </nav>
+          <div class="mt-2 mb-2">
+            <h1 class="text-color-white fs-28 text-center fw-bold">Menú de Navegación</h1>
+          </div>
+          <nav>
+            <div>
+              <h2 class="text-color-accent-gold fs-20 text-center fw-bold mt-1 mb-1">General</h2>
+              <ul>
+                <li><a href="#inicio">Introducción</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-color-accent-gold fs-20 text-center fw-bold mt-1 mb-1">Base</h2>
+              <ul>
+                <li><a href="#texto">Texto</a></li>
+                <li><a href="#variable">Variable</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-color-accent-gold fs-20 text-center fw-bold mt-1 mb-1">Componentes</h2>
+              <ul>
+                <li><a href="#alertas">Alertas</a></li>
+                <li><a href="#badges">Badges</a></li>
+                <li><a href="#botones">Botones</a></li>
+                <li><a href="#cards">Tarjetas</a></li>
+                <li><a href="#footer">Footer</a></li>
+                <li><a href="#forms">Formularios</a></li>
+                <li><a href="#navbar">Navbar</a></li>
+                <li><a href="#search">Búsqueda</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-color-accent-gold fs-20 text-center fw-bold mt-1 mb-1">Layout</h2>
+              <ul>
+                <li><a href="#container">Contenedores</a></li>
+                <li><a href="#flex">Flex</a></li>
+                <li><a href="#grid">Grid</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-color-accent-gold fs-14 text-center fw-bold mt-1 mb-1">Utilidades</h2>
+              <ul>
+                <li><a href="#borders">Bordes</a></li>
+                <li><a href="#colores">Colores</a></li>
+                <li><a href="#display">Display</a></li>
+                <li><a href="#position">Alineaciones de texto</a></li>
+                <li><a href="#shadow">Sombreado</a></li>
+                <li><a href="#spacion">Márgenes</a></li>
+              </ul>
+              <br><br><br>
+            </div>
+          </nav>
         </aside>
-
         <main class="main-content">
           <div class="container-section">
               <section id="inicio">
-                  <h1 class="fs-40 text-center fw-bold">Este es el comienzo de tu aventura con CadburyStyle!</h1>
-                  <h2 class="fs-20 text-center">Aquí encontrarás la Documentación necesaria para comenzar tu proyecto hoy!</h2>
+                  <h1 class="ff-1 fs-40 text-center fw-bold mb-3">Este es el comienzo de tu aventura con CadburyStyle!</h1>
+                  <h2 class="fs-20 text-center mb-3">Aquí encontrarás la Documentación necesaria para comenzar tu proyecto hoy!</h2>
                   <div style="text-align: center;">
-                      <img src="../docs/img/Hombre_ComiendoChocolate.png" alt="" width="auto" height="300px" style="border-radius: 25px;">
+                      <img src="img/Hombre_ComiendoChocolate.png" alt="" width="auto" height="300px" style="border-radius: 25px;">
                   </div>
                   <br>
-                  <p class="text-center fw-bold">Tu librería elegante para interfaces dulces y profesionales. Inspirada en la sobriedad del chocolate y la elegancia del morado Cadbury.</p>
+                  <h1 class="text-center fw-bold">Tu librería elegante para interfaces dulces y profesionales. Inspirada en la sobriedad del chocolate y la elegancia del morado Cadbury.</h1>
                   <br>
-                  <p class="text-justify">Dale un toque delicioso a tus proyectos web con esta exclusiva colección de componentes inspirados en el inconfundible sabor y calidad del chocolate Cadbury. Con una paleta de colores basada en tonos morados profundos, ricos chocolates y acentos dorados, nuestra librería ofrece una experiencia visual tan irresistible como el propio dulce.</p>
-                  <p class="text-justify">Desde botones suaves como un trozo de chocolate hasta tarjetas elegantes que reflejan la suavidad y el lujo de Cadbury, cada elemento ha sido diseñado para añadir ese toque de indulgencia a tu sitio. Los formularios emulan la cremosidad y textura perfecta, mientras que las alertas dinámicas te ofrecen una experiencia interactiva que resalta con el brillo de un chocolate premium.</p>
-                  <p class="text-justify">Nuestra barra de navegación fluye con la misma suavidad que una barra de Cadbury, guiando a tus usuarios de manera sencilla y elegante por tu web. Además, los distintivos (badges) te permiten resaltar los momentos más dulces y especiales de tu plataforma, al igual que el empaque dorado que identifica a Cadbury.</p>
-                  <p class="text-justify">Con contenedores diseñados para mejorar la experiencia de usuario y una cobertura completa de CSS y HTML, la librería <strong>Cadbury Style</strong> es la elección perfecta para que tu sitio web tenga la misma dulzura y calidad que el mejor chocolate.</p>
+                  <p class="text-justify ff-2">Dale un toque delicioso a tus proyectos web con esta exclusiva colección de componentes inspirados en el inconfundible sabor y calidad del chocolate Cadbury. Con una paleta de colores basada en tonos morados profundos, ricos chocolates y acentos dorados, nuestra librería ofrece una experiencia visual tan irresistible como el propio dulce.</p><br>
+                  <p class="text-justify ff-2">Desde botones suaves como un trozo de chocolate hasta tarjetas elegantes que reflejan la suavidad y el lujo de Cadbury, cada elemento ha sido diseñado para añadir ese toque de indulgencia a tu sitio. Los formularios emulan la cremosidad y textura perfecta, mientras que las alertas dinámicas te ofrecen una experiencia interactiva que resalta con el brillo de un chocolate premium.</p><br>
+                  <p class="text-justify ff-2">Nuestra barra de navegación fluye con la misma suavidad que una barra de Cadbury, guiando a tus usuarios de manera sencilla y elegante por tu web. Además, los distintivos (badges) te permiten resaltar los momentos más dulces y especiales de tu plataforma, al igual que el empaque dorado que identifica a Cadbury.</p><br>
+                  <p class="text-justify ff-2">Con contenedores diseñados para mejorar la experiencia de usuario y una cobertura completa de CSS y HTML, la librería <strong>Cadbury Style</strong> es la elección perfecta para que tu sitio web tenga la misma dulzura y calidad que el mejor chocolate.</p>
                   <br>
-                  <p class="text-justify fs-20 fw-bold">Explora lo siguiente en nuestra librería Cadbury Style:</p>
-                  <ul class="text-justify">
-                      <li><strong>Botones</strong>: Elegantes, suaves y de colores deliciosos para una interacción suave.</li>
-                      <li><strong>Tarjetas</strong>: Ricas en detalles y con un estilo sofisticado que recuerda la textura del chocolate.</li>
-                      <li><strong>Formularios</strong>: Diseñados para ser tan agradables como un trozo de chocolate en tu boca.</li>
-                      <li><strong>Alertas</strong>: Notificaciones sutiles y atractivas, al estilo Cadbury.</li>
-                      <li><strong>Badges</strong>: Distintivos que destacan logros y momentos especiales con un toque dorado.</li>
+                  <p class="text-justify fs-20 fw-bold ">Explora lo siguiente en nuestra librería Cadbury Style:</p>
+                  <ul class="text-justify ff-2">
+                      <li><img src="img/barra-de-chocolate.png" alt="" width="auto" height="20px" style="border-radius: 25px;"><strong class="fw-bold">Botones</strong>: Elegantes, suaves y de colores deliciosos para una interacción suave.</li>
+                      <li><img src="img/barra-de-chocolate.png" alt="" width="auto" height="20px" style="border-radius: 25px;"><strong class="fw-bold">Tarjetas</strong>: Ricas en detalles y con un estilo sofisticado que recuerda la textura del chocolate.</li>
+                      <li><img src="img/barra-de-chocolate.png" alt="" width="auto" height="20px" style="border-radius: 25px;"><strong class="fw-bold">Formularios</strong>: Diseñados para ser tan agradables como un trozo de chocolate en tu boca.</li>
+                      <li><img src="img/barra-de-chocolate.png" alt="" width="auto" height="20px" style="border-radius: 25px;"><strong class="fw-bold">Alertas</strong>: Notificaciones sutiles y atractivas, al estilo Cadbury.</li>
+                      <li><img src="img/barra-de-chocolate.png" alt="" width="auto" height="20px" style="border-radius: 25px;"><strong class="fw-bold">Badges</strong>: Distintivos que destacan logros y momentos especiales con un toque dorado.</li><br>
                   </ul>
-                  <p class="text-justify">Haz que tus proyectos web sean tan irresistibles como el chocolate Cadbury con nuestra librería <strong>Cadbury Style</strong>. ¡Atrévete a hacerlos únicos y deliciosos!</p>
-                  <br>
               </section>
           </div>
-      
-          <div class="container-section container-outline">
+            <!-- BASE -->
+            <h1 class="ff-1 fs-30 fw-bold text-color-accent-gold mb-2">Base</h1>
+            <div class="container-section container-outline mb-5">
+                <section id="texto">
+                    <h2 class="fs-30 fw-bold">Texto</h2>
+                    <p class="fs-24 m-2">Tamaños para el texto</p>
+                    <section style="width: 600px;" class="m-2 p-2 grid grid-template-col-2">
+                        <div class="fs-10">Font-size 10</div>
+                        <div class="fs-12">Font-size 12</div>
+                        <div class="fs-14">Font-size 14</div>
+                        <div class="fs-16">Font-size 16</div>
+                        <div class="fs-18">Font-size 18</div>
+                        <div class="fs-20">Font-size 20</div>
+                        <div class="fs-22">Font-size 22</div>
+                        <div class="fs-24">Font-size 24</div>
+                        <div class="fs-26">Font-size 26</div>
+                        <div class="fs-28">Font-size 28</div>
+                        <div class="fs-30">Font-size 30</div>
+                        <div class="fs-32">Font-size 32</div>
+                        <div class="fs-34">Font-size 34</div>
+                        <div class="fs-36">Font-size 36</div>
+                        <div class="fs-38">Font-size 38</div>
+                        <div class="fs-40">Font-size 40</div>
+                        <div class="fs-42">Font-size 42</div>
+                        <div class="fs-44">Font-size 44</div>
+                        <div class="fs-46">Font-size 46</div>
+                        <div class="fs-48">Font-size 48</div>
+                        <div class="fs-50">Font-size 50</div>
+                    </section>
+                    
+                    <p class="fs-24 m-2">Tipos de weight</p>
+                    <section style="width: 600px;" class="m-2 p-2 grid grid-template-col-2">
+                        <div class="fw-light">Weight light</div>
+                        <div class="fw-regular">Weight regular</div>
+                        <div class="fw-semibold">Weight semibold</div>
+                        <div class="fw-bold">Weight bold</div>
+                    </section>
+                    
+                    <p class="fs-24 m-2">Colores para el texto</p>
+                    <section style="width: 600px;" class="m-2 p-2 grid grid-template-col-2">
+                        <div class="text-color-primary-dark">Primary dark</div>
+                        <div class="text-color-primary">Primary</div>
+                        <div class="text-color-accent-gold">Accent gold</div>
+                        <div class="text-color-white" style="background-color: black;">White</div>
+                        <div class="text-color-primary-deep-dark">Primary deep dark</div>
+                        <div class="text-color-brown">Brown</div>
+                        <div class="text-color-success">Success</div>
+                        <div class="text-color-info">Info</div>
+                        <div class="text-color-warning">Warning</div>
+                        <div class="text-color-danger">Danger</div>
+                    </section>
+                    
+                    <p class="fs-24 m-2">Fuentes para el texto</p>
+                    <section style="width: 600px;" class="m-2 p-2 grid grid-template-col-2">
+                        <div class="ff-primary">Font family 1</div>
+                        <div class="ff-secondary">Font family 2</div>
+                    </section>
+                    <div class="container-code">
+                        <span class="comment">&lt;!-- Ejemplos de uso --&gt;</span><br>
+                        <!-- Tamaños de fuente -->
+                        <span class="variable"><</span>p <span class="function">class=</span><span class="string">"fs-10"</span><span class="variable">></span>Texto tamaño 10<span class="variable"><</span>/p<span class="variable">></span>
+                        <span class="variable"><</span>p <span class="function">class=</span><span class="string">"fs-16"</span><span class="variable">></span>Texto tamaño 16<span class="variable"><</span>/p<span class="variable">></span>
+                        <span class="variable"><</span>p <span class="function">class=</span><span class="string">"fs-24"</span><span class="variable">></span>Texto tamaño 24<span class="variable"><</span>/p<span class="variable">></span>
+                        <!-- Peso de fuente -->
+                        <span class="variable"><</span>p <span class="function">class=</span><span class="string">"fw-light"</span><span class="variable">></span>Texto con peso light<span class="variable"><</span>/p<span class="variable">></span>
+                        <span class="variable"><</span>p <span class="function">class=</span><span class="string">"fw-bold"</span><span class="variable">></span>Texto con peso bold<span class="variable"><</span>/p<span class="variable">></span>
+                        <!-- Colores de texto -->
+                        <span class="variable"><</span>p <span class="function">class=</span><span class="string">"text-color-primary"</span><span class="variable">></span>Texto en color primario<span class="variable"><</span>/p<span class="variable">></span>
+                        <span class="variable"><</span>p <span class="function">class=</span><span class="string">"text-color-warning"</span><span class="variable">></span>Texto en color de advertencia<span class="variable"><</span>/p<span class="variable">></span>
+                        <!-- Fuentes -->
+                        <span class="variable"><</span>p <span class="function">class=</span><span class="string">"ff-primary"</span><span class="variable">></span>Texto con fuente primaria<span class="variable"><</span>/p<span class="variable">></span>
+                        <span class="variable"><</span>p <span class="function">class=</span><span class="string">"ff-secondary"</span><span class="variable">></span>Texto con fuente secundaria<span class="variable"><</span>/p<span class="variable">></span>
+                        
+                    </div>          
+            </section>
+            </div>
+            <div class="container-section container-outline mb-5">
+                <section id="variable">
+                    <h2 class="fs-30 fw-bold">Variables</h2><br>
+                    <p>Listado de variables disponibles para personalización de estilos.</p><br>
+
+                    <div class="container-code">
+                        <span class="comment">&lt;!-- Ejemplos de uso de las variables SCSS --&gt;</span><br>
+                        <span class="variable"><</span>div <span class="function">class=</span><span class="string">"bg-color-primary"</span><span class="variable">></span>Texto con fondo morado base<span class="variable"><</span>/div>
+                        <span class="variable"><</span>div <span class="function">class=</span><span class="string">"text-color-accent-gold"</span><span class="variable">></span>Texto dorado de acento<span class="variable"><</span>/div>
+
+                        <span class="variable"><</span>div <span class="function">class=</span><span class="string">"shadow-sm"</span><span class="variable">></span>Elemento con sombra pequeña<span class="variable"><</span>/div>
+                        <span class="variable"><</span>div <span class="function">class=</span><span class="string">"shadow-lg"</span><span class="variable">></span>Elemento con sombra grande<span class="variable"><</span>/div>
+                        
+                        <span class="variable"><</span>div <span class="function">class=</span><span class="string">"alert alert-success"</span><span class="variable">></span>Alerta de éxito<span class="variable"><</span>/div>
+                        <span class="variable"><</span>div <span class="function">class=</span><span class="string">"alert alert-warning"</span><span class="variable">></span>Alerta de advertencia<span class="variable"><</span>/div>
+                        
+                        <span class="variable"><</span>div <span class="function">class=</span><span class="string">"dark-theme"</span><span class="variable">></span>Modo oscuro: fondo y texto invertido<span class="variable"><</span>/div>
+                        <span class="variable"><</span>div <span class="function">class=</span><span class="string">"light-theme"</span><span class="variable">></span>Modo claro: fondo y texto suave<span class="variable"><</span>/div>
+                        
+                        <span class="variable"><</span>p <span class="function">class=</span><span class="string">"fs-16"</span><span class="variable">></span>Texto con tamaño de fuente 16px<span class="variable"><</span>/p>
+                        <span class="variable"><</span>div <span class="function">class=</span><span class="string">"p-4"</span><span class="variable">></span>Div con padding de 4rem (espaciado 4)</span><br>
+                    </div>                    
+                </section>
+            </div>
+            <!-- COMPONENTES -->
+            <h1 class="ff-1 fs-30 fw-bold text-color-accent-gold">Componentes</h1><br>
+            <div class="container-section container-outline mb-5">
+                <section id="alertas">
+                    <h2 class="fs-30 fw-bold">Alertas</h2><br>
+                    <p>Explora 4 tipos de alertas de diferentes tipos: éxito, información, aviso, error.</p>
+                    <br>
+                    <!-- Ejemplos visuales de las alertas -->
+                    <div class="alerta-exito">¡Operación exitosa!</div>
+                    <div class="alerta-exito-sb">¡Operación exitosa!</div>
+            
+                    <div class="alerta-info">Información importante</div>
+                    <div class="alerta-info-sb">Información importante</div>
+            
+                    <div class="alerta-advertencia">Cuidado, esto es una advertencia</div>
+                    <div class="alerta-advertencia-sb">Cuidado, esto es una advertencia</div>
+            
+                    <div class="alerta-error">Error en la operación</div>
+                    <div class="alerta-error-sb">Error en la operación</div>
+            
+                    <h2>Ejemplo de uso</h2><br>
+                    <!-- Código de uso en HTML dentro del container-code -->
+                    <div class="container-code">
+
+                        </code>
+                      
+                    </div>
+                </section>
+            </div>
+            
+            <div class="container-section container-outline mb-5">
+                <section id="badges">
+                    <h2 class="fs-30 fw-bold">Badges</h2>
+                    <p>Incluye scripts ligeros para interacción y personalización dinámica.</p>
+                  
+                    <!-- Badge Solid -->
+                    <div class="mt-3">
+                      <h3 class="fs-20 fw-bold mb-2">Badge Solid (Sólido)</h3>
+                      <span class="badge badge-solid badge-primary">Sólido Primario</span>
+                      <span class="badge badge-solid badge-secondary">Sólido Secundario</span>
+                      <span class="badge badge-solid badge-warning">Sólido Advertencia</span>
+                      <span class="badge badge-solid badge-featured">Sólido Destacado</span>
+                      <span class="badge badge-solid badge-disabled">Sólido Desactivado</span>
+                    </div>
+                  
+                    <!-- Badge Minimal -->
+                    <div class="mt-3">
+                      <h3 class="fs-20 fw-bold mb-2">Badge Minimal (Minimalista)</h3>
+                      <span class="badge badge-minimal badge-primary">Minimal Primario</span>
+                      <span class="badge badge-minimal badge-secondary">Minimal Secundario</span>
+                      <span class="badge badge-minimal badge-warning">Minimal Advertencia</span>
+                      <span class="badge badge-minimal badge-featured">Minimal Destacado</span>
+                      <span class="badge badge-minimal badge-disabled">Minimal Desactivado</span>
+                    </div>
+                  
+                    <!-- Badge Ghost -->
+                    <div class="mt-3">
+                      <h3 class="fs-20 fw-bold mb-2">Badge Ghost (Fantasma)</h3>
+                      <span class="badge badge-ghost">Badge Fantasma</span>
+                    </div>
+                  </section>                  
+            </div>
+          <div class="container-section container-outline mb-5">
               <section id="botones">
                   <h2 class="fs-30 fw-bold">Botones</h2>
-                  <p>CadburyStyle contiene una gran variedad de botones prediseñados y la oportunidad de personalizar el tuyo.</p>
+                  <p class="font-secondary">CadburyStyle contiene una gran variedad de botones prediseñados y la oportunidad de personalizar el tuyo.</p>
                   <br>
+                  <div class="text-center mb-2">
+                    <button class="ds-btn ds-btn-primary">Botón Primario</button>
+                    <button class="ds-btn ds-btn-secondary">Botón Secundario</button>
+                    <button class="ds-btn ds-btn ds-btn-accent">Botón de Acento</button>
+                    <button class="ds-btn ds-btn ds-btn-light">Botón Claro</button>
+                    <button class="ds-btn ds-btn-brown">Botón Marrón</button>
+                    <br><br>
+                    <button class="ds-btn ds-btn-sm text-color-primary">Botón Pequeño</button>
+                    <button class="ds-btn ds-btn-md text-color-primary">Botón Medio</button>
+                    <button class="ds-btn ds-btn-lg text-color-primary">Botón Grande</button>
+                    <br><br>
+                    <button class="ds-btn ds-btn-dash-lilac bg-color-3">Botón Dash Lilac</button>
+                    <button class="ds-btn ds-btn-dash-gold bg-color-2">Botón Dash Gold</button>
+                    <button class="ds-btn ds-btn-dash-dark bg-color-3">Botón Dash Dark</button>
+                    <br><br>
+                    <button class="ds-btn ds-btn-square-lilac bg-color-7-grad">Botón Cuadrado Lilac</button>
+                    <button class="ds-btn ds-btn-square-gold">Botón Cuadrado Gold</button>
+                    <button class="ds-btn ds-btn-square-dark bg-color-8-grad">Botón Cuadrado Dark</button>
+                  </div>
                   <div class="container-code">
-                    Aqui va el codigo
-                </div>
+                    <span class="comment">&lt;!-- Ejemplos de uso --&gt;</span><br>
+                    <span class="variable"><</span>button <span class="function">class=</span><span class="string">"ds-btn ds-btn-primary"</span><span class="variable">></span>Botón Primario<span class="variable"><</span>/button<span class="variable">></span>
+                    <span class="variable"><</span>button <span class="function">class=</span><span class="string">"ds-btn ds-btn-secondary"</span><span class="variable">></span>Botón Secundario<span class="variable"><</span>/button<span class="variable">></span>
+                    <span class="variable"><</span>button <span class="function">class=</span><span class="string">"ds-btn ds-btn ds-btn-accent"</span><span class="variable">></span>Botón de Acento<span class="variable"><</span>/button<span class="variable">></span>
+                    <span class="variable"><</span>button <span class="function">class=</span><span class="string">"ds-btn ds-btn ds-btn-light"</span><span class="variable">></span>Botón Claro<span class="variable"><</span>/button<span class="variable">></span>
+                    <span class="variable"><</span>button <span class="function">class=</span><span class="string">"ds-btn ds-btn-brown"</span><span class="variable">></span>Botón Marrón<span class="variable"><</span>/button<span class="variable">></span>
+                    <span class="variable"><</span>button <span class="function">class=</span><span class="string">"ds-btn ds-btn-sm text-color-primary"</span><span class="variable">></span>Botón Pequeño<span class="variable"><</span>/button<span class="variable">></span>
+                    <span class="variable"><</span>button <span class="function">class=</span><span class="string">"ds-btn ds-btn-md text-color-primary"</span><span class="variable">></span>Botón Medio<span class="variable"><</span>/button<span class="variable">></span>
+                    <span class="variable"><</span>button <span class="function">class=</span><span class="string">"ds-btn ds-btn-lg text-color-primary"</span><span class="variable">></span>Botón Grande<span class="variable"><</span>/button<span class="variable">></span>
+                    <span class="variable"><</span>button <span class="function">class=</span><span class="string">"ds-btn ds-btn-dash-lilac bg-color-3"</span><span class="variable">></span>Botón Dash Lilac<span class="variable"><</span>/button<span class="variable">></span>
+                    <span class="variable"><</span>button <span class="function">class=</span><span class="string">"ds-btn ds-btn-dash-gold bg-color-2"</span><span class="variable">></span>Botón Dash Gold<span class="variable"><</span>/button<span class="variable">></span>
+                    <span class="variable"><</span>button <span class="function">class=</span><span class="string">"ds-btn ds-btn-dash-dark bg-color-3"</span><span class="variable">></span>Botón Dash Dark<span class="variable"><</span>/button<span class="variable">></span>
+                    <span class="variable"><</span>button <span class="function">class=</span><span class="string">"ds-btn ds-btn-square-lilac bg-color-7-grad"</span><span class="variable">></span>Botón Cuadrado Lilac<span class="variable"><</span>/button<span class="variable">></span>
+                    <span class="variable"><</span>button <span class="function">class=</span><span class="string">"ds-btn ds-btn-square-gold"</span><span class="variable">></span>Botón Cuadrado Gold<span class="variable"><</span>/button<span class="variable">></span>
+                    <span class="variable"><</span>button <span class="function">class=</span><span class="string">"ds-btn ds-btn-square-dark bg-color-8-grad"</span><span class="variable">></span>Botón Cuadrado Dark<span class="variable"><</span>/button<span class="variable">></span>
+                  </div>                  
               </section>
           </div>  
-          <div class="container-section container-outline mb-1">
-              <section id="contenidos">
-                  <h2 class="fs-30 fw-bold">Alertas</h2>
-                  <p>Explora 4 tipos de alertas de diferentes tipo: éxito, información, aviso, error.</p>
-                  <br>
-                  <div class="container-code">
-                    Aqui va el codigo
+          <div class="container-section container-outline mb-5">
+            <section id="cards">
+              <h2 class="fs-30 fw-bold">Tarjetas</h2>
+              <p>Construido con buenas prácticas para que todos disfruten tu producto, sin importar sus capacidades.</p>
+              <div class="d-flex justify-center flex-wrap bg-gap-20">
+                  <!-- Card Número 1 -->
+                  <div class="Tarjeta__1" style="width: 280px;">
+                      <img src="https://www.telemundo.com/sites/nbcutelemundo/files/images/article/cover/2018/04/26/mujer-comiendo-trozo-de-chocolate_0.jpg" alt="Imagen Card 1">
+                      <div class="card1__contenido">
+                          <h3>Chocolate Premium</h3>
+                          <p>Deléitate con el sabor auténtico del cacao con el toque elegante de Cadbury.</p>
+                          <a href="#">Descubrir más</a>
+                      </div>
+                  </div>
+          
+                  <!-- Card Número 2 -->
+                  <div class="Tarjeta__2" style="width: 280px;">
+                      <img src="https://www.telemundo.com/sites/nbcutelemundo/files/images/article/cover/2018/04/26/mujer-comiendo-trozo-de-chocolate_0.jpg" alt="Imagen Card 2">
+                      <div class="card2__contenido">
+                          <h3>Edición Dorada</h3>
+                          <p>El lujo en cada mordisco, con nuestro exclusivo toque dorado.</p>
+                          <a href="#">Ver detalles</a>
+                      </div>
+                  </div>
+          
+                  <!-- Card Número 3 -->
+                  <div class="card_3" style="background-image: url('https://www.telemundo.com/sites/nbcutelemundo/files/images/article/cover/2018/04/26/mujer-comiendo-trozo-de-chocolate_0.jpg'); width: 280px; height: 200px; background-size: cover; background-position: center; display: flex; justify-content: center; align-items: center; color: white;">
+                      <div>
+                          <h2>Cadbury Lovers</h2>
+                          <a href="#">Explorar</a>
+                      </div>
+                  </div>
+          
+                  <!-- Card Número 4 -->
+                  <div class="card_4" style="width: 280px;">
+                      <img src="https://www.telemundo.com/sites/nbcutelemundo/files/images/article/cover/2018/04/26/mujer-comiendo-trozo-de-chocolate_0.jpg" alt="Imagen Card 4">
+                      <div class="intro">
+                          <h1>Pasión por el Cacao</h1>
+                          <p>Un mundo de sabor y elegancia.</p>
+                      </div>
+                  </div>
+              </div>
+            </section>
+          </div>
+         <!-- FOOTER -->
+<div class="container-section container-outline mb-5">
+  <section id="footer">             
+      <h2 class="fs-30 fw-bold">Footer</h2><br>
+      <p>Pie de página estilizado para rematar tus sitios con elegancia.</p><br>
+
+      <footer class="footer bg-color-1">
+          <div class="navbar-logo">CadburyStyle</div>
+          <p>Transforma tu forma de escribir CSS.</p>
+          <div class="footer-bottom">
+              &copy; 2025 CadburyStyle. Todos los derechos reservados.
+          </div>
+      </footer><br>
+
+      <footer class="footer footer-social bg-color-2">
+          <p>Síguenos en nuestras redes sociales</p>
+          <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+              <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+              <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+          </div>
+          <div class="footer-bottom">
+              &copy; CadburyStyle 2025
+          </div>
+      </footer><br>     
+
+      <footer class="footer footer-columns bg-color-4">
+          <div class="column">
+              <h4>Recursos</h4>
+              <ul>
+                  <li><a href="#">Documentación</a></li>
+                  <li><a href="#">Guías</a></li>
+                  <li><a href="#">Tutoriales</a></li>
+              </ul>
+          </div>
+      
+          <div class="column">
+              <h4>Cadbury Style</h4>
+              <ul>
+                  <li><a href="#">Inicio</a></li>
+                  <li><a href="#">Ejemplos</a></li>
+                  <li><a href="#">Contacto</a></li>
+              </ul>
+          </div>
+
+          <hr>
+      
+          <div class="footer-bottom">
+              &copy; 2025 CadburyStyle. Todos los derechos reservados.
+          </div>
+      </footer><br>
+
+      <h2> Ejemplos de uso </h2><br>
+      <div class="container-code">
+          <span class="comment">&lt;!-- Footer básico con nombre y derechos reservados --&gt;</span><br>
+          <span class="variable"><</span>footer <span class="function">class=</span><span class="string">"footer bg-color-1"</span><span class="variable">></span><br>
+          <span class="variable"><</span>div <span class="function">class=</span><span class="string">"navbar-logo"</span><span class="variable">></span>CadburyStyle<span class="variable"><</span>/div><br>
+          <span class="variable"><</span>p<span class="variable">></span>Transforma tu forma de escribir CSS.<span class="variable"><</span>/p><br>
+          <span class="variable"><</span>div <span class="function">class=</span><span class="string">"footer-bottom"</span><span class="variable">></span>&copy; 2025 CadburyStyle. Todos los derechos reservados.<span class="variable"><</span>/div><br>
+          <span class="variable"><</span>/footer<span class="variable">></span><br><br>
+
+          <span class="comment">&lt;!-- Footer con enlaces a redes sociales --&gt;</span><br>
+          <span class="variable"><</span>footer <span class="function">class=</span><span class="string">"footer footer-social bg-color-2"</span><span class="variable">></span><br>
+          <span class="variable"><</span>p<span class="variable">></span>Síguenos en nuestras redes sociales<span class="variable"><</span>/p><br>
+          <span class="variable"><</span>div <span class="function">class=</span><span class="string">"social-icons"</span><span class="variable">></span><br>
+          <span class="variable"><</span>a href="#"<span class="variable">></span><span class="variable"><</span>i <span class="function">class=</span><span class="string">"fab fa-facebook"</span><span class="variable">></span><span class="variable"><</span>/i<span class="variable">></span> Facebook<span class="variable"><</span>/a><br>
+          <span class="variable"><</span>a href="#"<span class="variable">></span><span class="variable"><</span>i <span class="function">class=</span><span class="string">"fab fa-twitter"</span><span class="variable">></span><span class="variable"><</span>/i<span class="variable">></span> Twitter<span class="variable"><</span>/a><br>
+          <span class="variable"><</span>a href="#"<span class="variable">></span><span class="variable"><</span>i <span class="function">class=</span><span class="string">"fab fa-instagram"</span><span class="variable">></span><span class="variable"><</span>/i<span class="variable">></span> Instagram<span class="variable"><</span>/a><br>
+          <span class="variable"><</span>/div><br>
+          <span class="variable"><</span>div <span class="function">class=</span><span class="string">"footer-bottom"</span><span class="variable">></span>&copy; CadburyStyle 2025<span class="variable"><</span>/div><br>
+          <span class="variable"><</span>/footer<span class="variable">></span><br><br>
+
+          <span class="comment">&lt;!-- Footer con columnas de enlaces y recursos --&gt;</span><br>
+          <span class="variable"><</span>footer <span class="function">class=</span><span class="string">"footer footer-columns bg-color-4"</span><span class="variable">></span><br>
+          <span class="variable"><</span>div <span class="function">class=</span><span class="string">"column"</span><span class="variable">></span><br>
+          <span class="variable"><</span>h4<span class="variable">></span>Recursos<span class="variable"><</span>/h4><br>
+          <span class="variable"><</span>ul<span class="variable">></span><span class="variable"><</span>li<span class="variable">></span><span class="variable"><</span>a href="#"<span class="variable">></span>Documentación<span class="variable"><</span>/a><span class="variable"><</span>/li><br>
+          <span class="variable"><</span>...<br>
+          <span class="variable"><</span>/ul><br>
+          <span class="variable"><</span>/div><br>
+          <span class="variable"><</span>...<br>
+          <span class="variable"><</span>/footer><br>
+      </div>
+  </section>
+</div>
+
+<!-- FORMULARIO-->
+<div class="container-section container-outline mb-5">
+  <section id="forms">
+      <h2 class="fs-30 fw-bold">Formularios</h2><br>
+      <p>Campos de entrada elegantes con experiencia de usuario suave.</p><br>
+
+      <form class="formulario gap-3">
+          <label for="nombre" class="fw-bold">Nombre</label>
+          <input type="text" id="nombre" placeholder="Ingresa tu nombre" class="p-2 fs-16 br-8">
+
+          <label for="email" class="fw-bold">Correo electrónico</label>
+          <input type="email" id="email" placeholder="Ingresa tu correo" class="p-2 fs-16 br-8">
+
+          <label for="mensaje" class="fw-bold">Mensaje</label>
+          <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje" class="p-2 fs-16 br-8"></textarea>
+
+          <button type="submit" class="mt-3 p-2 bg-color-primary text-white fw-bold br-8">Enviar</button>
+      </form><br>
+
+      <h2>Ejemplos de uso </h2><br>
+      <div class="container-code">
+          <span class="comment">&lt;!-- Ejemplos de estructura de formularios con clases de flexbox --&gt;</span><br>
+          <span class="variable"><</span>form <span class="function">class=</span><span class="string">"formulario"</span><span class="variable">></span><br>
+          <span class="variable"><</span>div <span class="function">class=</span><span class="string">"row"</span><span class="variable">></span>Fila de elementos<span class="variable"><</span>/div><br>
+          <span class="variable"><</span>div <span class="function">class=</span><span class="string">"column"</span><span class="variable">></span>Columna de elementos<span class="variable"><</span>/div><br>
+          <span class="variable"><</span>/form<span class="variable">></span><br><br>
+
+          <span class="comment">&lt;!-- Clases responsivas para cambios según ancho de pantalla --&gt;</span><br>
+          <span class="variable"><</span>div <span class="function">class=</span><span class="string">"row sm-column"</span><span class="variable">></span>Fila que se convierte en columna en pantallas pequeñas<span class="variable"><</span>/div><br>
+          <span class="variable"><</span>div <span class="function">class=</span><span class="string">"column md-row"</span><span class="variable">></span>Columna que se convierte en fila en pantallas medianas<span class="variable"><</span>/div><br>
+          <span class="variable"><</span>div <span class="function">class=</span><span class="string">"formulario bg-column"</span><span class="variable">></span>Formulario en columna en pantallas grandes<span class="variable"><</span>/div>
+      </div>
+  </section>
+</div>
+<!-- NAVBAR -->
+<div class="container-section container-outline mb-5">
+  <section id="navbar">
+      <h2 class="fs-30 fw-bold">Navbar</h2><br>
+      <p>Te presentamos diferentes tipos de Barras de navegación superior con estilos Cadbury.</p><br>
+
+      <!-- Navbar Responsive Toggle -->
+      <nav class="navbar navbar-deep " style = "position: static;">
+          <div class="navbar-logo">CadburyStyle</div>
+
+          <input type="checkbox" id="nav-toggle" class="navbar-checkbox">
+          <label for="nav-toggle" class="navbar-toggle">|||</label>
+
+          <div class="navbar-links">
+              <a href="/docs/home.html">Inicio</a>
+              <a href="/docs/doc.html">Docs</a>
+              <a href="/docs/examples.html">Ejemplos</a>
+              <button class="theme-toggle-btn">🌙</button>
+          </div>
+      </nav><br>
+
+      <!-- Navbar SIEMPRE hamburguesa -->
+      <nav class="navbar navbar-hamburger-only bg-color-4 mt-4 text-white" style = "position: static;">
+          <div class="navbar-logo">CadburyStyle</div>
+
+          <input type="checkbox" id="nav-toggle-hamburger" class="navbar-checkbox" style = "position: static;">
+          <label for="nav-toggle-hamburger" class="navbar-toggle">|||</label>
+
+          <div class="navbar-links">
+              <a href="#">Inicio</a>
+              <a href="#">Docs</a>
+              <a href="#">Contacto</a>
+          </div>
+      </nav><br>
+
+      <!-- Navbar Transparente -->
+      <nav class="navbar navbar-transparent mt-4 text-white" style = "position: static;">
+          <div class="navbar-logo">CadburyStyle</div>
+
+          <input type="checkbox" id="nav-toggle-transparent" class="navbar-checkbox">
+          <label for="nav-toggle-transparent" class="navbar-toggle">|||</label>
+
+          <div class="navbar-links">
+              <a href="#">Inicio</a>
+              <a href="#">Docs</a>
+              <a href="#">Contacto</a>
+          </div>
+      </nav><br><br>
+
+      <!-- Ejemplos de uso -->
+       <h2>Ejemplos de uso </h2><br>
+      <div class="container-code">
+          <span class="comment">&lt;!-- Navbar con logo, enlaces y botón de modo oscuro --&gt;</span><br>
+          <span class="variable"><</span>nav <span class="function">class=</span><span class="string">"navbar navbar-deep"</span><span class="variable">></span><br>
+          <span class="variable"><</span>div <span class="function">class=</span><span class="string">"navbar-logo"</span><span class="variable">></span>CadburyStyle<span class="variable"><</span>/div><br>
+          <span class="variable"><</span>input <span class="function">type=</span><span class="string">"checkbox"</span> <span class="function">id=</span><span class="string">"nav-toggle"</span> <span class="function">class=</span><span class="string">"navbar-checkbox"</span><span class="variable">></span><br>
+          <span class="variable"><</span>label <span class="function">for=</span><span class="string">"nav-toggle"</span> <span class="function">class=</span><span class="string">"navbar-toggle"</span><span class="variable">></span>|||<span class="variable"><</span>/label><br>
+          <span class="variable"><</span>div <span class="function">class=</span><span class="string">"navbar-links"</span><span class="variable">></span><br>
+          <span class="variable"><</span>a href="#"<span class="variable">></span>Inicio<span class="variable"><</span>/a> ...<br>
+          <span class="variable"><</span>button <span class="function">class=</span><span class="string">"theme-toggle-btn"</span><span class="variable">></span>🌙<span class="variable"><</span>/button><br>
+          <span class="variable"><</span>/div><br>
+          <span class="variable"><</span>/nav><br><br>
+
+          <span class="comment">&lt;!-- Navbar siempre hamburguesa con fondo color 4 --&gt;</span><br>
+          <span class="variable"><</span>nav <span class="function">class=</span><span class="string">"navbar navbar-hamburger-only bg-color-4 text-white"</span><span class="variable">></span>...<span class="variable"><</span>/nav><br><br>
+
+          <span class="comment">&lt;!-- Navbar transparente ideal para superposiciones --&gt;</span><br>
+          <span class="variable"><</span>nav <span class="function">class=</span><span class="string">"navbar navbar-transparent text-white"</span><span class="variable">></span>...<span class="variable"><</span>/nav><br>
+      </div>
+  </section>
+</div>                
+        <!-- LAYOUTS --> 
+        <h1 class="ff-1 fs-30 fw-bold text-color-accent-gold">Layout</h1><br>
+        <div class="container-section container-outline mb-5">
+            <!-- Containers -->
+            <section id="containers">
+                <h2 class="fs-30 fw-bold">Containers</h2>
+                <p>Cadbury Style incluye distintos tipos de contenedores adaptables, decorativos y utilitarios.</p>
+              
+                <!-- Container estándar -->
+                <div class="container mt-3">
+                  <h3 class="fs-20 fw-bold">Container estándar</h3>
+                  <p>Este container tiene un ancho máximo que se adapta según el tamaño de pantalla.</p>
+                </div><br>
+              
+                <!-- Container fluido -->
+                <div class="container-fluid mt-3" style="background-color: #f9f9f9;">
+                  <h3 class="fs-20 fw-bold">Container fluido</h3>
+                  <p>Este container ocupa el 100% del ancho de la ventana sin límites.</p>
+                </div><br>
+              
+                <!-- Container con borde decorativo -->
+                <div class="container-outline mt-3">
+                  <h3 class="fs-20 fw-bold">Container Outline</h3>
+                  <p>Este tipo tiene un borde punteado y sombra ligera para destacar secciones.</p>
+                </div><br>
+              
+                <!-- Container con imagen de fondo -->
+                <div class="container-image-bg mt-3" style="background-image: url('/docs/img/logo-primary-2.png');">
+                  <h3 class="fs-20 fw-bold">Container con fondo</h3>
+                  <p>Perfecto para secciones destacadas o encabezados con fondo visual.</p>
+                </div><br>
+              
+                <!-- Container centrado -->
+                <div class="container-centered mt-3" style="background-color: #f0f0f0;">
+                  <h3 class="fs-20 fw-bold">Container centrado</h3>
+                  <p>El contenido está centrado tanto vertical como horizontalmente.</p>
+                </div><br>
+              
+                <!-- Container para código -->
+                <div class="container-code">
+                  <span class="comment">// Ejemplo de código</span><br>
+                  <span class="variable">const</span> <span class="function">saludo</span> = <span class="string">"Hola Cadbury Style"</span>;
+                </div>
+              
+                <!-- Container personalizable con modificadores -->
+                <div class="container-personalizable is-centered has-spacing" style="background-color: #e7f7ff;">
+                  <h3 class="fs-20 fw-bold">Container Personalizable</h3>
+                  <p>Se adapta como el estándar pero permite modificadores de centrado y separación.</p>
                 </div>
               </section>
+        </div>
+        <div class="container-section container-outline mb-5">
+          <section id="flex">
+            <h2 class="fs-30 fw-bold">Flexbox</h2><br>
+            <p>Clases de utilidad para diseño flexible y alineación.</p><br>
+          </section>
+          <div class="container mt-4">
+            <h3 class="fs-20 fw-bold">Ejemplo: Dirección de fila y espacio entre elementos</h3>
+            <div class="flex flex-d-row justify-content-between gap-10 bg-color-2 p-2">
+              <div class="p-2 bg-color-4 text-color-white">Elemento 1</div>
+              <div class="p-2 bg-color-4 text-color-white">Elemento 2</div>
+              <div class="p-2 bg-color-4 text-color-white">Elemento 3</div>
+            </div>
           </div>
-          <div class="container-section">
-              <section id="javascript">
-                  <h2>JavaScript</h2>
-                  <p>Incluye scripts ligeros para interacción y personalización dinámica.</p>
-              </section>
+          
+          <div class="container mt-4">
+            <h3 class="fs-20 fw-bold">Ejemplo: Dirección columna y centrado</h3>
+            <div class="flex flex-d-col align-items-center gap-5 bg-color-1 p-2">
+              <div class="p-2 bg-color-4 text-color-white">Columna 1</div>
+              <div class="p-2 bg-color-4 text-color-white">Columna 2</div>
+              <div class="p-2 bg-color-4 text-color-white">Columna 3</div>
+            </div>
           </div>
-      
-          <div class="container-section">
-              <section id="accesibilidad">
-                  <h2>Accesibilidad</h2>
-                  <p>Construido con buenas prácticas para que todos disfruten tu producto, sin importar sus capacidades.</p>
-              </section>
+          
+          <div class="container mt-4">
+            <h3 class="fs-20 fw-bold">Ejemplo: Elementos con distintos `flex-grow`</h3>
+            <div class="flex gap-5 bg-color-2 p-2">
+              <div class="p-2 bg-color-4 text-color-white flex-grow-1">1</div>
+              <div class="p-2 bg-color-4 text-color-white flex-grow-2">2</div>
+              <div class="p-2 bg-color-4 text-color-white flex-grow-3">3</div>
+            </div>
           </div>
-      </main>
-      
-    </div>
+          
+          <div class="container mt-4">
+            <h3 class="fs-20 fw-bold">Ejemplo: Flex-wrap y basis</h3>
+            <div class="flex flex-wrap gap-5 bg-color-1 p-2">
+              <div class="p-2 bg-color-4 text-color-white flex-basis-3">30%</div>
+              <div class="p-2 bg-color-4 text-color-white flex-basis-3">30%</div>
+              <div class="p-2 bg-color-4 text-color-white flex-basis-3">30%</div>
+              <div class="p-2 bg-color-4 text-color-white flex-basis-3">30%</div>
+            </div>
+          </div>
+          <br>
+          <h2>Ejemplos de uso</h2><br>
+          <div class="container-code">
+            <span class="comment">&lt;!-- Contenedor flexible básico --&gt;</span><br>
+            <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"flex"</span><span class="variable">&gt;</span>...<span class="variable">&lt;/div&gt;</span><br><br>
+        
+            <span class="comment">&lt;!-- Dirección de fila inversa --&gt;</span><br>
+            <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"flex flex-d-rowr"</span><span class="variable">&gt;</span>...<span class="variable">&lt;/div&gt;</span><br><br>
+        
+            <span class="comment">&lt;!-- Dirección columna con wrap --&gt;</span><br>
+            <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"flex flex-d-col flex-wrap"</span><span class="variable">&gt;</span>...<span class="variable">&lt;/div&gt;</span><br><br>
+        
+            <span class="comment">&lt;!-- Distribución centrada y separación --&gt;</span><br>
+            <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"flex justify-content-between align-items-center gap-10"</span><span class="variable">&gt;</span>...<span class="variable">&lt;/div&gt;</span><br><br>
+        
+            <span class="comment">&lt;!-- Elemento con crecimiento flexible --&gt;</span><br>
+            <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"flex-grow-1"</span><span class="variable">&gt;</span>Contenido<span class="variable">&lt;/div&gt;</span><br><br>
+        
+            <span class="comment">&lt;!-- Elemento con base del 40% y shrink --&gt;</span><br>
+            <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"flex-basis-4 flex-shrink-1"</span><span class="variable">&gt;</span>Contenido<span class="variable">&lt;/div&gt;</span><br><br>
+        
+            <span class="comment">&lt;!-- Alineación individual de un hijo --&gt;</span><br>
+            <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"align-self-end"</span><span class="variable">&gt;</span>Elemento<span class="variable">&lt;/div&gt;</span>
+          </div>
+        </div>
+        
+        <div class="container-section container-outline mb-5">
+          <section id="grid">
+            <h2 class="fs-30 fw-bold">Grid</h2>
+            <p>Sistema de cuadrícula para un diseño estructurado.</p>
+        
+            <h3 class="fs-20 fw-bold mt-4">Ejemplo: 3 columnas iguales</h3>
+            <div class="grid grid-template-col-3 col-gap-10 row-gap-10 bg-color-1 p-2">
+              <div class="bg-color-4 text-color-white p-2">Columna 1</div>
+              <div class="bg-color-4 text-color-white p-2">Columna 2</div>
+              <div class="bg-color-4 text-color-white p-2">Columna 3</div>
+            </div>
+        
+            <h3 class="fs-20 fw-bold mt-4">Ejemplo: 2 filas x 2 columnas</h3>
+            <div class="grid grid-template-col-2 grid-template-row-2 col-gap-10 row-gap-10 bg-color-2 p-2">
+              <div class="bg-color-4 text-color-white p-2">1</div>
+              <div class="bg-color-4 text-color-white p-2">2</div>
+              <div class="bg-color-4 text-color-white p-2">3</div>
+              <div class="bg-color-4 text-color-white p-2">4</div>
+            </div>
+        
+            <h3 class="fs-20 fw-bold mt-4">Ejemplo: Posicionamiento personalizado</h3>
+            <div class="grid grid-template-col-4 col-gap-5 row-gap-5 bg-color-1 p-2">
+              <div class="bg-color-4 text-color-white p-2 grid-col-start-2 grid-col-end-4">Elemento 1 (col 2-4)</div>
+              <div class="bg-color-4 text-color-white p-2 grid-col-start-1 grid-col-end-3">Elemento 2 (col 1-3)</div>
+            </div>
+        
+            <h3 class="fs-20 fw-bold mt-4">Ejemplo: Alineación con justify-items</h3>
+            <div class="grid grid-template-col-3 col-gap-10 row-gap-10 justify-items-center bg-color-2 p-2">
+              <div class="bg-color-4 text-color-white p-2">Centro</div>
+              <div class="bg-color-4 text-color-white p-2">Centro</div>
+              <div class="bg-color-4 text-color-white p-2">Centro</div>
+            </div>
+        
+            <!-- Código como referencia -->
+             <br>
+             <h2>Ejemplos de uso</h2>
+             <br>
+            <div class="container-code">
+              <span class="comment">&lt;!-- Contenedor flexible básico --&gt;</span><br>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"flex"</span><span class="variable">&gt;</span>...<span class="variable">&lt;/div&gt;</span><br><br>
+              <span class="comment">&lt;!-- Dirección de fila inversa --&gt;</span><br>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"flex flex-d-rowr"</span><span class="variable">&gt;</span>...<span class="variable">&lt;/div&gt;</span><br><br>
+              <span class="comment">&lt;!-- Dirección columna con wrap --&gt;</span><br>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"flex flex-d-col flex-wrap"</span><span class="variable">&gt;</span>...<span class="variable">&lt;/div&gt;</span><br><br>
+              <span class="comment">&lt;!-- Distribución centrada y separación --&gt;</span><br>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"flex justify-content-between align-items-center gap-10"</span><span class="variable">&gt;</span>...<span class="variable">&lt;/div&gt;</span><br><br>
+              <span class="comment">&lt;!-- Elemento con crecimiento flexible --&gt;</span><br>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"flex-grow-1"</span><span class="variable">&gt;</span>Contenido<span class="variable">&lt;/div&gt;</span><br><br>
+              <span class="comment">&lt;!-- Elemento con base del 40% y shrink --&gt;</span><br>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"flex-basis-4 flex-shrink-1"</span><span class="variable">&gt;</span>Contenido<span class="variable">&lt;/div&gt;</span><br><br>
+              <span class="comment">&lt;!-- Alineación individual de un hijo --&gt;</span><br>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"align-self-end"</span><span class="variable">&gt;</span>Elemento<span class="variable">&lt;/div&gt;</span>
+            </div>            
+          </section>
+        </div>                
+        <h1 class="ff-1 fs-30 fw-bold text-color-accent-gold">Utilidades</h1>
+        <div class="container-section container-outline mb-5">
+          <section id="borders">
+            <h2 class="fs-30 fw-bold">Bordes</h2>
+            <p>Opciones de bordes redondeados y líneas decorativas.</p><br>
+            
+            <!-- Ejemplos de bordes con distintos estilos -->
+            <div class="example-container"><br>
+              <div class="border-red-1-1-solid">
+                <p>Borde 1 (purpura + dorado) - 1</p>
+              </div><br>
+              <div class="border-red-1-2-dashed">
+                <p>Borde 1 (purpura + dorado) - 2</p>
+              </div><br>
+              <div class="border-red-2-3-solid">
+                <p>Borde 2 (violeta) - 3</p>
+              </div><br>
+              <div class="border-red-2-4-dashed">
+                <p>Borde 2 (violeta) - 4</p>
+              </div><br>
+              <div class="border-red-3-1-solid">
+                <p>Borde 3 (dorado) - 1</p>
+              </div><br>
+              <div class="border-red-3-5-dashed">
+                <p>Borde 3 (dorado) - 5</p>
+              </div><br>
+              <div class="border-red-4-2-solid">
+                <p>Borde 4 (negro + violeta) - 2</p>
+              </div><br>
+              <div class="border-red-4-4-dashed">
+                <p>Borde 4 (negro + violeta) - 4</p>
+              </div><br>
+              <div class="border-red-5-1-solid">
+                <p>Borde 5 (gradiente rojizo) - 1</p>
+              </div><br>
+              <div class="border-red-5-3-dashed">
+                <p>Borde 5 (gradiente rojizo) - 3</p>
+              </div><br>
+            </div>
+        
+            <!-- Ejemplos de bordes básicos de 1px a 5px -->
+            <div class="basic-borders">
+              <div class="border-primary-dark">
+                <p>Borde primario oscuro - 1px</p>
+              </div><br>
+              <div class="border-primary-2">
+                <p>Borde primario - 2px</p>
+              </div><br>
+              <div class="border-accent-gold-3">
+                <p>Borde dorado acentuado - 3px</p>
+              </div><br>
+              <div class="border-white-4">
+                <p>Borde blanco - 4px</p>
+              </div><br>
+              <div class="border-primary-deep-dark-5">
+                <p>Borde primario profundo oscuro - 5px</p>
+              </div><br>
+            </div><br>
+            <h2>Ejemplos de uso</h2><br>
+            <div class="container-code">
+              <span class="comment">&lt;!-- Ejemplo de borde 1 (purpura + dorado) - 1 --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"border-red-1-1-solid"</span><span class="variable">&gt;</span><span class="text-color-white">Borde 1 (purpura + dorado) - 1</span><span class="variable">&lt;/div&gt;</span>
+            
+              <span class="comment">&lt;!-- Ejemplo de borde 1 (purpura + dorado) - 2 --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"border-red-1-2-dashed"</span><span class="variable">&gt;</span><span class="text-color-white">Borde 1 (purpura + dorado) - 2</span><span class="variable">&lt;/div&gt;</span>
+            
+              <span class="comment">&lt;!-- Ejemplo de borde 2 (violeta) - 3 --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"border-red-2-3-solid"</span><span class="variable">&gt;</span><span class="text-color-white">Borde 2 (violeta) - 3</span><span class="variable">&lt;/div&gt;</span>
+            
+              <span class="comment">&lt;!-- Ejemplo de borde 2 (violeta) - 4 --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"border-red-2-4-dashed"</span><span class="variable">&gt;</span><span class="text-color-white">Borde 2 (violeta) - 4</span><span class="variable">&lt;/div&gt;</span>
+            
+              <span class="comment">&lt;!-- Ejemplo de borde 3 (dorado) - 1 --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"border-red-3-1-solid"</span><span class="variable">&gt;</span><span class="text-color-white">Borde 3 (dorado) - 1</span><span class="variable">&lt;/div&gt;</span>
+            
+              <span class="comment">&lt;!-- Ejemplo de borde 3 (dorado) - 5 --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"border-red-3-5-dashed"</span><span class="variable">&gt;</span><span class="text-color-white">Borde 3 (dorado) - 5</span><span class="variable">&lt;/div&gt;</span>
+            
+              <span class="comment">&lt;!-- Ejemplo de borde 4 (negro + violeta) - 2 --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"border-red-4-2-solid"</span><span class="variable">&gt;</span><span class="text-color-white">Borde 4 (negro + violeta) - 2</span><span class="variable">&lt;/div&gt;</span>
+            
+              <span class="comment">&lt;!-- Ejemplo de borde 4 (negro + violeta) - 4 --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"border-red-4-4-dashed"</span><span class="variable">&gt;</span><span class="text-color-white">Borde 4 (negro + violeta) - 4</span><span class="variable">&lt;/div&gt;</span>
+            
+              <span class="comment">&lt;!-- Ejemplo de borde 5 (gradiente rojizo) - 1 --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"border-red-5-1-solid"</span><span class="variable">&gt;</span><span class="text-color-white">Borde 5 (gradiente rojizo) - 1</span><span class="variable">&lt;/div&gt;</span>
+            
+              <span class="comment">&lt;!-- Ejemplo de borde 5 (gradiente rojizo) - 3 --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"border-red-5-3-dashed"</span><span class="variable">&gt;</span><span class="text-color-white">Borde 5 (gradiente rojizo) - 3</span><span class="variable">&lt;/div&gt;</span>
+            
+              <span class="comment">&lt;!-- Ejemplo de borde primario oscuro - 1px --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"border-primary-dark"</span><span class="variable">&gt;</span><span class="text-color-white">Borde primario oscuro - 1px</span><span class="variable">&lt;/div&gt;</span>
+            
+              <span class="comment">&lt;!-- Ejemplo de borde primario - 2px --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"border-primary-2"</span><span class="variable">&gt;</span><span class="text-color-white">Borde primario - 2px</span><span class="variable">&lt;/div&gt;</span>
+            
+              <span class="comment">&lt;!-- Ejemplo de borde dorado acentuado - 3px --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"border-accent-gold-3"</span><span class="variable">&gt;</span><span class="text-color-white">Borde dorado acentuado - 3px</span><span class="variable">&lt;/div&gt;</span>
+            
+              <span class="comment">&lt;!-- Ejemplo de borde blanco - 4px --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"border-white-4"</span><span class="variable">&gt;</span><span class="text-color-white">Borde blanco - 4px</span><span class="variable">&lt;/div&gt;</span>
+            
+              <span class="comment">&lt;!-- Ejemplo de borde primario profundo oscuro - 5px --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"border-primary-deep-dark-5"</span><span class="variable">&gt;</span><span class="text-color-white">Borde primario profundo oscuro - 5px</span><span class="variable">&lt;/div&gt;</span>
+            </div>
+          </section>
+        </div>
 
+        <div class="container-section container-outline mb-5">
+          <section id="colores">
+            <h2 class="fs-30 fw-bold">Colores</h2><br>
+            <p>Paleta de colores inspirada en el chocolate y el lujo Cadbury.</p>
+            <br>
+            <!-- Ejemplos visuales de los fondos -->
+            <div class="bg-color-1 text-color-white p-3 mb-3">Fondo sólido 1 (purpura secundaria)</div>
+            <div class="bg-color-2 text-color-white p-3 mb-3">Fondo sólido 2 (primario)</div>
+            <div class="bg-color-3 text-color-white p-3 mb-3">Fondo sólido 3 (dorado acentuado)</div>
+            <div class="bg-color-4 text-color-white p-3 mb-3">Fondo sólido 4 (primario profundo oscuro)</div>
+            <div class="bg-color-5 text-color-white p-3 mb-3">Fondo sólido 5 (rojo claro)</div>
+            <div class="bg-color-6-grad text-color-white p-3 mb-3">Fondo gradiente 6 (verde azulado)</div>
+            <div class="bg-color-7-grad text-color-white p-3 mb-3">Fondo gradiente 7 (amarillo oscuro)</div>
+            <div class="bg-color-8-grad text-color-white p-3 mb-3">Fondo gradiente 8 (rosa pálido)</div>
+        
+            <!-- Ejemplos de código -->
+            <div class="container-code">
+              <span class="comment">&lt;!-- Ejemplo de fondo sólido 1 (purpura secundaria) --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"bg-color-1"</span><span class="variable">&gt;</span><span class="text-color-white">Fondo sólido 1 (purpura secundaria)</span><span class="variable">&lt;/div&gt;</span>
+        
+              <span class="comment">&lt;!-- Ejemplo de fondo sólido 2 (primario) --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"bg-color-2"</span><span class="variable">&gt;</span><span class="text-color-white">Fondo sólido 2 (primario)</span><span class="variable">&lt;/div&gt;</span>
+        
+              <span class="comment">&lt;!-- Ejemplo de fondo sólido 3 (dorado acentuado) --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"bg-color-3"</span><span class="variable">&gt;</span><span class="text-color-white">Fondo sólido 3 (dorado acentuado)</span><span class="variable">&lt;/div&gt;</span>
+        
+              <span class="comment">&lt;!-- Ejemplo de fondo sólido 4 (primario profundo oscuro) --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"bg-color-4"</span><span class="variable">&gt;</span><span class="text-color-white">Fondo sólido 4 (primario profundo oscuro)</span><span class="variable">&lt;/div&gt;</span>
+        
+              <span class="comment">&lt;!-- Ejemplo de fondo sólido 5 (rojo claro) --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"bg-color-5"</span><span class="variable">&gt;</span><span class="text-color-white">Fondo sólido 5 (rojo claro)</span><span class="variable">&lt;/div&gt;</span>
+        
+              <span class="comment">&lt;!-- Ejemplo de fondo gradiente 6 (verde azulado) --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"bg-color-6-grad"</span><span class="variable">&gt;</span><span class="text-color-white">Fondo gradiente 6 (verde azulado)</span><span class="variable">&lt;/div&gt;</span>
+        
+              <span class="comment">&lt;!-- Ejemplo de fondo gradiente 7 (amarillo oscuro) --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"bg-color-7-grad"</span><span class="variable">&gt;</span><span class="text-color-white">Fondo gradiente 7 (amarillo oscuro)</span><span class="variable">&lt;/div&gt;</span>
+        
+              <span class="comment">&lt;!-- Ejemplo de fondo gradiente 8 (rosa pálido) --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"bg-color-8-grad"</span><span class="variable">&gt;</span><span class="text-color-white">Fondo gradiente 8 (rosa pálido)</span><span class="variable">&lt;/div&gt;</span>
+            </div>
+          </section>
+        </div>                
+        <div class="container-section container-outline mb-5">
+          <section id="display">
+            <h2 class="fs-30 fw-bold">Display</h2><br>
+            <p>Utilidades para controlar cómo se muestra un elemento.</p>
+            <br>
+            <!-- Ejemplos visuales -->
+            <div class="d-flex flex-direction-c gap-2">
+              <div class="p-2 bg-color-3 text-color-white">Elemento visible</div>
+              <div class="visible-hidden p-2 bg-color-5 text-color-white">.visible-hidden (oculto pero con espacio)</div>
+              <div class="full-hidden p-2 bg-color-5 text-color-white">.full-hidden (completamente oculto)</div>
+              <div class="visually-hidden">.visually-hidden (oculto visualmente, accesible por lectores de pantalla)</div>
+            </div>
+            <div class="mt-4 d-flex flex-direction-c gap-2">
+              <div class="d-flex justify-between bg-color-4 text-color-white p-2">
+                <span>Inicio</span>
+                <span>Centro</span>
+                <span>Fin</span>
+              </div>
+              <div class="d-flex justify-center bg-color-4 text-color-white p-2">
+                <span>Centro</span>
+              </div>
+              <div class="d-flex flex-direction-c align-end bg-color-4 text-color-white p-2" style="height: 80px;">
+                <span>Final</span>
+              </div>
+            </div>
+        
+            <!-- Código de ejemplo -->
+            <div class="container-code mt-4">
+              <span class="comment">&lt;!-- Ocultar con espacio reservado --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"visible-hidden"</span><span class="variable">&gt;</span>Contenido oculto<span class="variable">&lt;/div&gt;</span>
+        
+              <span class="comment">&lt;!-- Ocultar completamente sin espacio --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"full-hidden"</span><span class="variable">&gt;</span>Contenido oculto<span class="variable">&lt;/div&gt;</span>
+        
+              <span class="comment">&lt;!-- Solo visible para tecnologías de asistencia --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"visually-hidden"</span><span class="variable">&gt;</span>Texto accesible<span class="variable">&lt;/div&gt;</span>
+        
+              <span class="comment">&lt;!-- Flex con alineación --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"d-flex justify-center align-center"</span><span class="variable">&gt;</span>Contenido centrado<span class="variable">&lt;/div&gt;</span>
+        
+              <span class="comment">&lt;!-- Flex en columna --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"d-flex flex-direction-c"</span><span class="variable">&gt;</span>Contenido en columna<span class="variable">&lt;/div&gt;</span>
+            </div>
+          </section>
+        </div>
+        
+        <div class="container-section container-outline mb-5">
+          <section id="position">
+            <h2 class="fs-30 fw-bold">Alineaciones de texto</h2><br>
+            <p>Clases para justificar, alinear al centro o a los lados tu contenido.</p><br>
+            <!-- Ejemplos visuales -->
+            <div class="d-flex flex-direction-c gap-2 p-3">
+              <p class="text-left">.text-left - Texto alineado a la izquierda</p>
+              <p class="text-center">.text-center - Texto centrado</p>
+              <p class="text-right">.text-right - Texto alineado a la derecha</p>
+              <p class="text-justify">
+                .text-justify - Este es un ejemplo de texto justificado. Esta clase se utiliza cuando se desea que los bordes del párrafo estén alineados tanto a la izquierda como a la derecha, proporcionando un aspecto limpio y uniforme.
+              </p>
+            </div>
+        
+            <!-- Código de ejemplo -->
+             <br>
+            <h2>Ejemplos de uso</h2>
+            <div class="container-code mt-4">
+              <span class="comment">&lt;!-- Texto alineado a la izquierda --&gt;</span>
+              <span class="variable">&lt;p</span> <span class="function">class=</span><span class="string">"text-left"</span><span class="variable">&gt;</span>Texto a la izquierda<span class="variable">&lt;/p&gt;</span>
+        
+              <span class="comment">&lt;!-- Texto centrado --&gt;</span>
+              <span class="variable">&lt;p</span> <span class="function">class=</span><span class="string">"text-center"</span><span class="variable">&gt;</span>Texto centrado<span class="variable">&lt;/p&gt;</span>
+        
+              <span class="comment">&lt;!-- Texto alineado a la derecha --&gt;</span>
+              <span class="variable">&lt;p</span> <span class="function">class=</span><span class="string">"text-right"</span><span class="variable">&gt;</span>Texto a la derecha<span class="variable">&lt;/p&gt;</span>
+        
+              <span class="comment">&lt;!-- Texto justificado --&gt;</span>
+              <span class="variable">&lt;p</span> <span class="function">class=</span><span class="string">"text-justify"</span><span class="variable">&gt;</span>Texto justificado<span class="variable">&lt;/p&gt;</span>
+            </div>
+          </section>
+        </div>        
+        <div class="container-section container-outline mb-5">
+          <section id="shadow">
+            <h2 class="fs-30 fw-bold">Sombreado</h2>
+            <p>Estilos para dar profundidad y realce con sombras suaves.</p>
+        
+            <!-- Ejemplos visuales alineados en una sola línea -->
+            <div class="d-flex gap-3 p-3">
+              <div class="bg-color-2 text-color-white p-3 shadow-sm me-2">.shadow-sm</div>
+              <div class="bg-color-2 text-color-white p-3 shadow-md me-2">.shadow-md</div>
+              <div class="bg-color-2 text-color-white p-3 shadow-lg me-2">.shadow-lg</div>
+            </div>
+        
+            <!-- Código de ejemplo -->
+            <div class="container-code mt-4">
+              <span class="comment">&lt;!-- Sombra pequeña --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"shadow-sm"</span><span class="variable">&gt;</span>Contenido<span class="variable">&lt;/div&gt;</span>
+              <span class="comment">&lt;!-- Sombra media --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"shadow-md"</span><span class="variable">&gt;</span>Contenido<span class="variable">&lt;/div&gt;</span>
+              <span class="comment">&lt;!-- Sombra grande --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"shadow-lg"</span><span class="variable">&gt;</span>Contenido<span class="variable">&lt;/div&gt;</span>
+            </div>
+          </section>
+        </div>                
+        <div class="container-section container-outline mb-5">
+          <section id="spacion">
+            <h2 class="fs-30 fw-bold">Márgenes y Espaciado</h2>
+            <p>Clases de espaciado interno y externo para control de layout.</p>
+        
+            <!-- Ejemplos visuales -->
+            <div class="d-flex flex-direction-c align-start gap-4 p-3">
+              <div class="bg-color-3 text-color-primary-deep-dark p-2 m-1 border rounded w-fit">.m-1</div>
+              <div class="bg-color-3 text-color-primary-deep-dark p-2 mt-3 mb-3 border rounded w-fit">.mt-3 .mb-3</div>
+              <div class="bg-color-3 text-color-primary-deep-dark p-2 ms-4 me-4 border rounded w-fit">.ms-4 .me-4</div>
+              <div class="bg-color-3 text-color-primary-deep-dark p-1 pt-5 pb-5 border rounded w-fit">.pt-5 .pb-5</div>
+              <div class="bg-color-3 text-color-primary-deep-dark p-2 ps-3 pe-3 border rounded w-fit">.ps-3 .pe-3</div>
+            </div>
+        
+            <!-- Código de ejemplo -->
+            <div class="container-code mt-4">
+              <span class="comment">&lt;!-- Margen general --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"m-1"</span><span class="variable">&gt;</span>Contenido<span class="variable">&lt;/div&gt;</span>
+        
+              <span class="comment">&lt;!-- Márgenes verticales --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"mt-3 mb-3"</span><span class="variable">&gt;</span>Contenido<span class="variable">&lt;/div&gt;</span>
+        
+              <span class="comment">&lt;!-- Márgenes horizontales --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"ms-4 me-4"</span><span class="variable">&gt;</span>Contenido<span class="variable">&lt;/div&gt;</span>
+        
+              <span class="comment">&lt;!-- Paddings verticales --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"pt-5 pb-5"</span><span class="variable">&gt;</span>Contenido<span class="variable">&lt;/div&gt;</span>
+        
+              <span class="comment">&lt;!-- Paddings horizontales --&gt;</span>
+              <span class="variable">&lt;div</span> <span class="function">class=</span><span class="string">"ps-3 pe-3"</span><span class="variable">&gt;</span>Contenido<span class="variable">&lt;/div&gt;</span>
+            </div>
+          </section>
+        </div>               
+      </main>
+    </div>
+    <footer class="footer footer-columns bg-color-4">
+      <div class="column">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="doc.html">Documentación</a></li>
+          <li><a href="install.html">Guías</a></li>
+          <li><a href="index.html">Tutoriales</a></li>
+        </ul>
+      </div>
+    
+      <div class="column">
+        <h4>Cadbury Style</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="doc.html">Ejemplos</a></li>
+          <li><a href="doc.html">Contacto</a></li>
+        </ul>
+      </div>
+    
+      <hr>
+    
+      <div class="footer-bottom">
+        &copy; 2025 CadburyStyle. Todos los derechos reservados.
+      </div>
+    </footer>
+    
     <script>
       document.addEventListener('DOMContentLoaded', function() {
           const themeToggleBtn = document.querySelector('.theme-toggle-btn');
@@ -126,6 +1057,6 @@
               themeToggleBtn.textContent = (tema === 'theme-light') ? '🌙' : '☀️';
           }
       });
-    </script>
+    </script> 
 </body>
 </html>
